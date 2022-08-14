@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="/Users/a/Downloads/demoMyBatis/src/main/java/com/example/demoMyBatis/mapper/PersonMapperCustom" >
+
+    <select id="findByName" parameterType="string" resultType="/Users/a/Downloads/demoMyBatis/src/main/java/com/example/demoMyBatis/dao/Person">
+        select * from person where name=#{name}
+
+    </select>
+
+    <select id="selectPersonnameAndAge" parameterType="map" resultType="/Users/a/Downloads/demoMyBatis/src/main/java/com/example/demoMyBatis/dao/Person">
+        select * from person  where name=#{name} and age=#{age}
+    </select>
+
+</mapper>
